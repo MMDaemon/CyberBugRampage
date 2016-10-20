@@ -191,9 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 2
-  height: 0.8
+  heightPercentage: 0.8
   speedH: 8
-  speedV: 4
+  cameraHeight: 0.2
 --- !u!1 &516904611
 GameObject:
   m_ObjectHideFlags: 0
