@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerAttributes : MonoBehaviour
 {
 
-	public int MaxHp;
-	public float MaxEnergy;
+	public int MaxHp = 100;
+	public float MaxEnergy = 250;
+	public float EnergyDrainSpeed = 10;
 	public Text HpText;
 	public Text EnergyText;
 
@@ -23,8 +25,28 @@ public class PlayerAttributes : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		Energy -= Time.deltaTime;
+		Energy -= Time.deltaTime * EnergyDrainSpeed;
+		if (Energy <= 0 || HP <=0)
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+		}
 		UpdateTexts();
+	}
+
+	public bool AddEnergy(float amount)
+	{
+		if (Energy+amount <= MaxEnergy)
+		{
+			Energy += amount;
+			return true;
+		}
+		else return false;
+
+	}
+
+	public void DealDamage(int amount)
+	{
+		HP += amount;
 	}
 
 	private void UpdateTexts()

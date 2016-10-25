@@ -29,7 +29,7 @@ public class MeleeWeapon : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate()
 	{
-		if (_attackReady && Input.GetButton("Fire1"))
+		if (_attackReady && Input.GetButtonDown("Fire1"))
 		{
 			StartAttack();
 		}

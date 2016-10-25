@@ -325,7 +325,7 @@ GameObject:
   - 114: {fileID: 114000011895127616}
   - 114: {fileID: 114000010122789148}
   - 114: {fileID: 114000011060051402}
-  - 114: {fileID: 114000014197238192}
+  - 114: {fileID: 114000011852521784}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2647,8 +2647,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHp: 100
   MaxEnergy: 250
+  EnergyDrainSpeed: 10
   HpText: {fileID: 0}
   EnergyText: {fileID: 0}
+--- !u!114 &114000011852521784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010912504796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554b5a53a1b59b44fb99ce684b4c5cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyPrefab: {fileID: 1000012887748632, guid: adebd4f9bfce52e49b27c18663c7948e,
+    type: 2}
+  TimeValue: 4
+  TimeScope: 2
+  MinDist: 3
+  MaxDist: 7
 --- !u!114 &114000011895127616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2660,18 +2678,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000014197238192
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010912504796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992990921723ba44e86481f8b9e1b795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MeleeCollider: {fileID: 1000011165499306}
 --- !u!136 &136000010972191290
 CapsuleCollider:
   m_ObjectHideFlags: 1

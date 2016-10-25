@@ -26,19 +26,22 @@ public class LookAtPlayer : MonoBehaviour
 	void FixedUpdate()
 	{
 		Vector3 playerShoulder = _player.position + _playerCollider.transform.up * _playerCollider.height * HeightPercentage;
-
+		float xRotbefore = transform.eulerAngles.x;
+		//follow player
 		transform.LookAt(playerShoulder);
+		transform.eulerAngles = new Vector3(xRotbefore, transform.eulerAngles.y, transform.eulerAngles.z);
+		float flatDistance = Vector3.Dot(transform.forward * Distance, Vector3.Normalize(Vector3.Scale(transform.forward, new Vector3(1, 0, 1))));
+		float currentDistance = Vector3.Distance(Vector3.Scale(transform.position, new Vector3(1, 0, 1)), Vector3.Scale(playerShoulder, new Vector3(1, 0, 1)));
+		transform.position += Vector3.Scale(transform.forward, new Vector3(1, 0, 1)) * (currentDistance - flatDistance);
 
-		float currentDistance = Vector3.Distance(transform.position, playerShoulder);
-		transform.position = transform.position + transform.forward * (currentDistance - Distance);
-		Vector3 rotationX = new Vector3(SpeedV * Input.GetAxis("Mouse Y"), 0.0f, 0.0f);
-		if ((transform.eulerAngles - rotationX).x < 60.0f || (transform.eulerAngles - rotationX).x > 300.0f)
-		{
-			transform.eulerAngles -= rotationX;
-		}
+		//manual rotation
+		//Vector3 rotationX = new Vector3(SpeedV * Input.GetAxis("Mouse Y"), 0.0f, 0.0f);
+		//if ((transform.eulerAngles - rotationX).x < 60.0f || (transform.eulerAngles - rotationX).x > 300.0f)
+		//{
+		//	transform.eulerAngles -= rotationX;
+		//}
 		Vector3 rotationY = new Vector3(0.0f, SpeedH * Input.GetAxis("Mouse X"), 0.0f);
 		transform.eulerAngles += rotationY;
-
 
 		this.transform.position = playerShoulder - transform.forward * Distance;
 	}

@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
+
+	public GameObject EnergyOrbPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +20,8 @@ public class Enemy : MonoBehaviour {
 	{
 		if (collider.tag.Equals("MeleeCollider"))
 		{
+			GameObject energyOrb = GameObject.Instantiate(EnergyOrbPrefab);
+			energyOrb.transform.position = this.transform.position;
 			gameObject.SetActive(false);
 		}
 	}
