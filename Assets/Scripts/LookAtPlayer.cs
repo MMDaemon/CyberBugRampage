@@ -30,7 +30,7 @@ public class LookAtPlayer : MonoBehaviour
 		//follow player
 		transform.LookAt(playerShoulder);
 		transform.eulerAngles = new Vector3(xRotbefore, transform.eulerAngles.y, transform.eulerAngles.z);
-		float flatDistance = Vector3.Dot(transform.forward * Distance, Vector3.Normalize(Vector3.Scale(transform.forward, new Vector3(1, 0, 1))));
+		float flatDistance = Vector3.Scale(transform.forward, new Vector3(1, 0, 1)).magnitude;
 		float currentDistance = Vector3.Distance(Vector3.Scale(transform.position, new Vector3(1, 0, 1)), Vector3.Scale(playerShoulder, new Vector3(1, 0, 1)));
 		transform.position += Vector3.Scale(transform.forward, new Vector3(1, 0, 1)) * (currentDistance - flatDistance);
 
