@@ -42,7 +42,6 @@ public class SpawnEnemies : MonoBehaviour
 			Vector3 randomVector = Vector3.Normalize(new Vector3(randX, 0, randY)) * Random.Range(MinDist, MaxDist);
 
 			enemy.transform.position = transform.position + new Vector3(0, 1, 0) + randomVector;
-			Debug.Log(randomVector);
 			_currentTime = TimeValue + Random.Range(-TimeScope, TimeScope);
 		}
 	}

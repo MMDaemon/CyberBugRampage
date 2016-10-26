@@ -5,15 +5,18 @@ public class Enemy : MonoBehaviour
 {
 
 	public GameObject EnergyOrbPrefab;
+	public float Speed = 1;
+
+	private Transform player;
 
 	// Use this for initialization
 	void Start () {
-	
+		player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void FixedUpdate () {
+		transform.position = Vector3.MoveTowards(transform.position, player.position, Speed * Time.deltaTime);
 	}
 
 	void OnTriggerEnter(Collider collider)

@@ -54,4 +54,12 @@ public class PlayerAttributes : MonoBehaviour
 		HpText.text = "HP: " + HP;
 		EnergyText.text = "Energy: " + (int)Energy;
 	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		if (collision.collider.tag.Equals("Enemy"))
+		{
+			HP -= 10;
+		}
+	}
 }
