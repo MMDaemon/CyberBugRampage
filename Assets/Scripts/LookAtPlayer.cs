@@ -40,8 +40,13 @@ public class LookAtPlayer : MonoBehaviour
 		//{
 		//	transform.eulerAngles -= rotationX;
 		//}
-		Vector3 rotationY = new Vector3(0.0f, SpeedH * Input.GetAxis("Mouse X"), 0.0f);
-		transform.eulerAngles += rotationY;
+		float xMove = Input.GetAxis("Mouse X");
+		if (Mathf.Abs(xMove) > 0.1)
+		{
+			Vector3 rotationY = new Vector3(0.0f, SpeedH * xMove, 0.0f);
+			transform.eulerAngles += rotationY;
+		}
+
 
 		this.transform.position = playerShoulder - transform.forward * Distance;
 	}
