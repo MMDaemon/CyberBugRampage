@@ -5,14 +5,18 @@ using UnityEngine.UI;
 public class PlayerAttributes : MonoBehaviour
 {
 
-	public int MaxHp = 100;
+	public float MaxHp = 100;
 	public float MaxEnergy = 250;
 	public float EnergyDrainSpeed = 10;
+	public float RecoveryWait = 5;
+	public float RecoverySpeed = 5;
 	public Text HpText;
 	public Text EnergyText;
 
-	public int HP { get; private set; }
+	public float HP { get; private set; }
 	public float Energy { get; private set; }
+
+	private float _recoveryTimer = 0;
 
 	// Use this for initialization
 	void Start()
@@ -23,10 +27,11 @@ public class PlayerAttributes : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update()
+	void FixedUpdate()
 	{
+		CheckRecovery();
 		Energy -= Time.deltaTime * EnergyDrainSpeed;
-		if (Energy <= 0 || HP <=0)
+		if (Energy <= 0 || HP <= 0)
 		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
 		}
@@ -35,7 +40,7 @@ public class PlayerAttributes : MonoBehaviour
 
 	public bool AddEnergy(float amount)
 	{
-		if (Energy+amount <= MaxEnergy)
+		if (Energy + amount <= MaxEnergy)
 		{
 			Energy += amount;
 			return true;
@@ -44,22 +49,47 @@ public class PlayerAttributes : MonoBehaviour
 
 	}
 
-	public void DealDamage(int amount)
+	public void ResetRecoveryTimer()
 	{
-		HP += amount;
+		_recoveryTimer = 0;
+	}
+
+	public void DealDamage(float amount)
+	{
+		HP -= amount;
+		ResetRecoveryTimer();
 	}
 
 	private void UpdateTexts()
 	{
-		HpText.text = "HP: " + HP;
+		HpText.text = "HP: " + (int)HP;
 		EnergyText.text = "Energy: " + (int)Energy;
+	}
+
+	private void CheckRecovery()
+	{
+		_recoveryTimer += Time.deltaTime;
+		if (_recoveryTimer >= RecoveryWait && HP < MaxHp)
+		{
+			float healthGain = Time.deltaTime * RecoverySpeed;
+			float healthNeed = MaxHp - HP;
+			if (healthGain > healthNeed)
+			{
+				healthGain = healthNeed;
+			}
+
+			HP += healthGain;
+			Energy -= healthGain;
+		}
 	}
 
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider.tag.Equals("Enemy"))
 		{
-			HP -= 10;
+			DealDamage(10);
 		}
 	}
+
+
 }

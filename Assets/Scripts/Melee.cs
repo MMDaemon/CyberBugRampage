@@ -34,6 +34,7 @@ public class Melee : MonoBehaviour
 
 	private void StartAttack()
 	{
+		GetComponent<PlayerAttributes>().ResetRecoveryTimer();
 		_animator.SetBool("Hit", true);
 		RightHandCollider.enabled = true;
 	}

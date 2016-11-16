@@ -6,16 +6,21 @@ public class Enemy : MonoBehaviour
 
 	public GameObject EnergyOrbPrefab;
 	public float Speed = 1;
+	[Range(0.0f, 1.0f)]
+	[SerializeField]
+	float Droprate = 0.7f;
 
 	private Transform player;
 
 	// Use this for initialization
-	void Start () {
+	void Start()
+	{
 		player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
-	
+
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate()
+	{
 		transform.position = Vector3.MoveTowards(transform.position, player.position, Speed * Time.deltaTime);
 	}
 
@@ -23,9 +28,13 @@ public class Enemy : MonoBehaviour
 	{
 		if (collider.tag.Equals("MeleeCollider"))
 		{
-			GameObject energyOrb = GameObject.Instantiate(EnergyOrbPrefab);
-			energyOrb.transform.position = this.transform.position;
+			if (Random.Range(0.0f, 1.0f) <= Droprate)
+			{
+				GameObject energyOrb = GameObject.Instantiate(EnergyOrbPrefab);
+				energyOrb.transform.position = this.transform.position;
+			}
 			gameObject.SetActive(false);
+
 		}
 	}
 }
