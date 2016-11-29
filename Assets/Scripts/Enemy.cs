@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
 			if (Random.Range(0.0f, 1.0f) <= Droprate)
 			{
 				GameObject energyOrb = GameObject.Instantiate(EnergyOrbPrefab);
-				energyOrb.transform.position = this.transform.position;
+				energyOrb.transform.position = this.transform.position+Vector3.up;
 			}
 			gameObject.SetActive(false);
 
