@@ -74,7 +74,7 @@
     <Compile Include="Assets\Scripts\EnergyOrb.cs" />
     <Compile Include="Assets\Scripts\LookAtPlayer.cs" />
     <Compile Include="Assets\Scripts\Melee.cs" />
-    <Compile Include="Assets\Scripts\MeleeWeapon.cs" />
+    <Compile Include="Assets\Scripts\MeleeEnemy.cs" />
     <Compile Include="Assets\Scripts\PlayerAttributes.cs" />
     <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
   </ItemGroup>

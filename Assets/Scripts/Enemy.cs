@@ -18,12 +18,6 @@ public class Enemy : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 
-	// Update is called once per frame
-	void FixedUpdate()
-	{
-		transform.position = Vector3.MoveTowards(transform.position, player.position, Speed * Time.deltaTime);
-	}
-
 	void OnTriggerEnter(Collider collider)
 	{
 		if (collider.tag.Equals("MeleeCollider"))

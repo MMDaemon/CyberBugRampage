@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MeleeCollider
   - Enemy
+  - EnemyMeleeCollider
   layers:
   - Default
   - TransparentFX

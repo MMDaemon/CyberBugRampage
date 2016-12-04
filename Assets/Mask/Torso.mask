@@ -7,4 +7,571 @@ AvatarMask:
   m_PrefabInternal: {fileID: 0}
   m_Name: Torso
   m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
-  m_Elements: []
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: 22_CyberI_1.4_0_0.00
+    m_Weight: 1
+  - m_Path: 22_CyberII_1.4_0_0.0
+    m_Weight: 1
+  - m_Path: 22_CyberIII_1.4_0_0.
+    m_Weight: 1
+  - m_Path: 22_CyberIV_1.4_0_0.0
+    m_Weight: 1
+  - m_Path: 22_CyberV_1.4_0_0.00
+    m_Weight: 1
+  - m_Path: 22_CyberV_1.4_0_0.001
+    m_Weight: 1
+  - m_Path: armature
+    m_Weight: 1
+  - m_Path: armature/Root 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/LeftLeg Thigh
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/LeftLeg Thigh/unusedLeftUpLegRoll
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/LeftLeg Thigh/unusedLeftUpLegRoll/LeftLeg Knee
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/LeftLeg Thigh/unusedLeftUpLegRoll/LeftLeg Knee/unusedLeftLegRoll
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/LeftLeg Thigh/unusedLeftUpLegRoll/LeftLeg Knee/unusedLeftLegRoll/LeftLeg
+      Foot
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/LeftLeg Thigh/unusedLeftUpLegRoll/LeftLeg Knee/unusedLeftLegRoll/LeftLeg
+      Foot/LeftLeg Foot Toe
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/LeftLeg Thigh/unusedLeftUpLegRoll/LeftLeg Knee/unusedLeftLegRoll/LeftLeg
+      Foot/LeftLeg Foot Toe/LeftLeg Foot Toe_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/RightLeg Thigh
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/RightLeg Thigh/unusedRightUpLegRoll
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/RightLeg Thigh/unusedRightUpLegRoll/RightLeg Knee
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/RightLeg Thigh/unusedRightUpLegRoll/RightLeg Knee/unusedRightLegRoll
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/RightLeg Thigh/unusedRightUpLegRoll/RightLeg Knee/unusedRightLegRoll/RightLeg
+      Foot
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/RightLeg Thigh/unusedRightUpLegRoll/RightLeg Knee/unusedRightLegRoll/RightLeg
+      Foot/RightLeg Toe
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/RightLeg Thigh/unusedRightUpLegRoll/RightLeg Knee/unusedRightLegRoll/RightLeg
+      Foot/RightLeg Toe/RightLeg Toe_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Chest Door Left
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Chest Door Left/Chest Door
+      Left_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Chest Door Right
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Chest Door Right/Chest
+      Door Right_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Left 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Left 1/Dred Lower Left 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Left 1/Dred Lower Left 2/Dred Lower Left 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Left 1/Dred Lower Left 2/Dred Lower Left 3/Dred Lower Left 4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Left 1/Dred Lower Left 2/Dred Lower Left 3/Dred Lower Left 4/Dred Lower
+      Left 5
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Left 1/Dred Lower Left 2/Dred Lower Left 3/Dred Lower Left 4/Dred Lower
+      Left 5/Dred Lower Left 6
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Left 1/Dred Lower Left 2/Dred Lower Left 3/Dred Lower Left 4/Dred Lower
+      Left 5/Dred Lower Left 6/Dred Lower Left 7
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Left 1/Dred Lower Left 2/Dred Lower Left 3/Dred Lower Left 4/Dred Lower
+      Left 5/Dred Lower Left 6/Dred Lower Left 7/Dred Lower Left 8
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Left 1/Dred Lower Left 2/Dred Lower Left 3/Dred Lower Left 4/Dred Lower
+      Left 5/Dred Lower Left 6/Dred Lower Left 7/Dred Lower Left 8/Dred Lower Left
+      9
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Left 1/Dred Lower Left 2/Dred Lower Left 3/Dred Lower Left 4/Dred Lower
+      Left 5/Dred Lower Left 6/Dred Lower Left 7/Dred Lower Left 8/Dred Lower Left
+      9/Dred Lower Left 9_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Right 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Right 1/Dred Lower Right 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Right 1/Dred Lower Right 2/Dred Lower Right 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Right 1/Dred Lower Right 2/Dred Lower Right 3/Dred Lower Right 4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Right 1/Dred Lower Right 2/Dred Lower Right 3/Dred Lower Right 4/Dred
+      Lower Right 5
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Right 1/Dred Lower Right 2/Dred Lower Right 3/Dred Lower Right 4/Dred
+      Lower Right 5/Dred Lower Right 6
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Right 1/Dred Lower Right 2/Dred Lower Right 3/Dred Lower Right 4/Dred
+      Lower Right 5/Dred Lower Right 6/Dred Lower Right 7
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Right 1/Dred Lower Right 2/Dred Lower Right 3/Dred Lower Right 4/Dred
+      Lower Right 5/Dred Lower Right 6/Dred Lower Right 7/Dred Lower Right 8
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Right 1/Dred Lower Right 2/Dred Lower Right 3/Dred Lower Right 4/Dred
+      Lower Right 5/Dred Lower Right 6/Dred Lower Right 7/Dred Lower Right 8/Dred
+      Lower Right 9
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Lower Right 1/Dred Lower Right 2/Dred Lower Right 3/Dred Lower Right 4/Dred
+      Lower Right 5/Dred Lower Right 6/Dred Lower Right 7/Dred Lower Right 8/Dred
+      Lower Right 9/Dred Lower Right 9_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Middle Center 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Middle Center 1/Dred Middle Center 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Middle Center 1/Dred Middle Center 2/Dred Middle Center 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Middle Center 1/Dred Middle Center 2/Dred Middle Center 3/Dred Middle Center
+      4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Middle Center 1/Dred Middle Center 2/Dred Middle Center 3/Dred Middle Center
+      4/Dred Middle Center 5
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Middle Center 1/Dred Middle Center 2/Dred Middle Center 3/Dred Middle Center
+      4/Dred Middle Center 5/Dred Middle Center 6
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Middle Center 1/Dred Middle Center 2/Dred Middle Center 3/Dred Middle Center
+      4/Dred Middle Center 5/Dred Middle Center 6/Dred Middle Center 7
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Middle Center 1/Dred Middle Center 2/Dred Middle Center 3/Dred Middle Center
+      4/Dred Middle Center 5/Dred Middle Center 6/Dred Middle Center 7/Dred Middle
+      Center 8
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Middle Center 1/Dred Middle Center 2/Dred Middle Center 3/Dred Middle Center
+      4/Dred Middle Center 5/Dred Middle Center 6/Dred Middle Center 7/Dred Middle
+      Center 8/Dred Middle Center 9
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Middle Center 1/Dred Middle Center 2/Dred Middle Center 3/Dred Middle Center
+      4/Dred Middle Center 5/Dred Middle Center 6/Dred Middle Center 7/Dred Middle
+      Center 8/Dred Middle Center 9/Dred Middle Center 9_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Center 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Center 1/Dred Upper Center 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Center 1/Dred Upper Center 2/Dred Upper Center 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Center 1/Dred Upper Center 2/Dred Upper Center 3/Dred Upper Center 4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Center 1/Dred Upper Center 2/Dred Upper Center 3/Dred Upper Center 4/Dred
+      Upper Center 5
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Center 1/Dred Upper Center 2/Dred Upper Center 3/Dred Upper Center 4/Dred
+      Upper Center 5/Dred Upper Center 6
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Center 1/Dred Upper Center 2/Dred Upper Center 3/Dred Upper Center 4/Dred
+      Upper Center 5/Dred Upper Center 6/Dred Upper Center 7
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Center 1/Dred Upper Center 2/Dred Upper Center 3/Dred Upper Center 4/Dred
+      Upper Center 5/Dred Upper Center 6/Dred Upper Center 7/Dred Upper Center 8
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Center 1/Dred Upper Center 2/Dred Upper Center 3/Dred Upper Center 4/Dred
+      Upper Center 5/Dred Upper Center 6/Dred Upper Center 7/Dred Upper Center 8/Dred
+      Upper Center 9
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Center 1/Dred Upper Center 2/Dred Upper Center 3/Dred Upper Center 4/Dred
+      Upper Center 5/Dred Upper Center 6/Dred Upper Center 7/Dred Upper Center 8/Dred
+      Upper Center 9/Dred Upper Center 9_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Left 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Left 1/Dred Upper Left 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Left 1/Dred Upper Left 2/Dred Upper Left 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Left 1/Dred Upper Left 2/Dred Upper Left 3/Dred Upper Left 4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Left 1/Dred Upper Left 2/Dred Upper Left 3/Dred Upper Left 4/Dred Upper
+      Left 5
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Left 1/Dred Upper Left 2/Dred Upper Left 3/Dred Upper Left 4/Dred Upper
+      Left 5/Dred Upper Left 6
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Left 1/Dred Upper Left 2/Dred Upper Left 3/Dred Upper Left 4/Dred Upper
+      Left 5/Dred Upper Left 6/Dred Upper Left 7
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Left 1/Dred Upper Left 2/Dred Upper Left 3/Dred Upper Left 4/Dred Upper
+      Left 5/Dred Upper Left 6/Dred Upper Left 7/Dred Upper Left 8
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Left 1/Dred Upper Left 2/Dred Upper Left 3/Dred Upper Left 4/Dred Upper
+      Left 5/Dred Upper Left 6/Dred Upper Left 7/Dred Upper Left 8/Dred Upper Left
+      9
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Left 1/Dred Upper Left 2/Dred Upper Left 3/Dred Upper Left 4/Dred Upper
+      Left 5/Dred Upper Left 6/Dred Upper Left 7/Dred Upper Left 8/Dred Upper Left
+      9/Dred Upper Left 9_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Right 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Right 1/Dred Upper Right 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Right 1/Dred Upper Right 2/Dred Upper Right 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Right 1/Dred Upper Right 2/Dred Upper Right 3/Dred Upper Right 4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Right 1/Dred Upper Right 2/Dred Upper Right 3/Dred Upper Right 4/Dred
+      Upper Right 5
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Right 1/Dred Upper Right 2/Dred Upper Right 3/Dred Upper Right 4/Dred
+      Upper Right 5/Dred Upper Right 6
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Right 1/Dred Upper Right 2/Dred Upper Right 3/Dred Upper Right 4/Dred
+      Upper Right 5/Dred Upper Right 6/Dred Upper Right 7
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Right 1/Dred Upper Right 2/Dred Upper Right 3/Dred Upper Right 4/Dred
+      Upper Right 5/Dred Upper Right 6/Dred Upper Right 7/Dred Upper Right 8
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Right 1/Dred Upper Right 2/Dred Upper Right 3/Dred Upper Right 4/Dred
+      Upper Right 5/Dred Upper Right 6/Dred Upper Right 7/Dred Upper Right 8/Dred
+      Upper Right 9
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Dred
+      Upper Right 1/Dred Upper Right 2/Dred Upper Right 3/Dred Upper Right 4/Dred
+      Upper Right 5/Dred Upper Right 6/Dred Upper Right 7/Dred Upper Right 8/Dred
+      Upper Right 9/Dred Upper Right 9_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Head
+      Eyes Left
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Head
+      Eyes Left/Head Eyes Left_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Head
+      Eyes Right
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/Head Neck 1/Head 1/Head
+      Eyes Right/Head Eyes Right_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Index 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Index 1/LeftHand Index 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Index 1/LeftHand Index 2/LeftHand Index 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Index 1/LeftHand Index 2/LeftHand Index 3/unusedLeftHandIndex4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Index 1/LeftHand Index 2/LeftHand Index 3/unusedLeftHandIndex4/unusedLeftHandIndex4_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Middle 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Middle 1/LeftHand Middle 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Middle 1/LeftHand Middle 2/LeftHand Middle 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Middle 1/LeftHand Middle 2/LeftHand Middle 3/unusedLeftHandMiddle4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Middle 1/LeftHand Middle 2/LeftHand Middle 3/unusedLeftHandMiddle4/unusedLeftHandMiddle4_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Pinky 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Pinky 1/LeftHand Pinky 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Pinky 1/LeftHand Pinky 2/LeftHand Pinky 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Pinky 1/LeftHand Pinky 2/LeftHand Pinky 3/unusedLeftHandPinky4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Pinky 1/LeftHand Pinky 2/LeftHand Pinky 3/unusedLeftHandPinky4/unusedLeftHandPinky4_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Ring 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Ring 1/LeftHand Ring 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Ring 1/LeftHand Ring 2/LeftHand Ring 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Ring 1/LeftHand Ring 2/LeftHand Ring 3/unusedLeftHandRing4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Ring 1/LeftHand Ring 2/LeftHand Ring 3/unusedLeftHandRing4/unusedLeftHandRing4_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Thumb 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Thumb 1/LeftHand Thumb 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Thumb 1/LeftHand Thumb 2/LeftHand Thumb 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Thumb 1/LeftHand Thumb 2/LeftHand Thumb 3/unusedLeftHandThumb4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/LeftHand Clavicle/LeftHand
+      Shoulder/unusedLeftArmRoll/LeftHand ForeArm/unusedLeftForeArmRoll/LeftHand Hand/LeftHand
+      Thumb 1/LeftHand Thumb 2/LeftHand Thumb 3/unusedLeftHandThumb4/unusedLeftHandThumb4_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Index 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Index 1/RightHand Index 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Index 1/RightHand Index 2/RightHand Index 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Index 1/RightHand Index 2/RightHand Index 3/unusedRightHandIndex4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Index 1/RightHand Index 2/RightHand Index 3/unusedRightHandIndex4/unusedRightHandIndex4_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Middle 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Middle 1/RightHand Middle 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Middle 1/RightHand Middle 2/RightHand Middle 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Middle 1/RightHand Middle 2/RightHand Middle 3/unusedRightHandMiddle4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Middle 1/RightHand Middle 2/RightHand Middle 3/unusedRightHandMiddle4/unusedRightHandMiddle4_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Pinky 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Pinky 1/RightHand Pinky 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Pinky 1/RightHand Pinky 2/RightHand Pinky 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Pinky 1/RightHand Pinky 2/RightHand Pinky 3/unusedRightHandPinky4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Pinky 1/RightHand Pinky 2/RightHand Pinky 3/unusedRightHandPinky4/unusedRightHandPinky4_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Ring 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Ring 1/RightHand Ring 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Ring 1/RightHand Ring 2/RightHand Ring 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Ring 1/RightHand Ring 2/RightHand Ring 3/unusedRightHandRing4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Ring 1/RightHand Ring 2/RightHand Ring 3/unusedRightHandRing4/unusedRightHandRing4_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Thumb 1
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Thumb 1/RightHand Thumb 2
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Thumb 1/RightHand Thumb 2/RightHand Thumb 3
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Thumb 1/RightHand Thumb 2/RightHand Thumb 3/unusedRightHandThumb4
+    m_Weight: 1
+  - m_Path: armature/Root 1/Hips 1/Spine 1/Spine 2/Spine 3/RightHand Clavicle/RightHand
+      Shoulder/unusedRightArmRoll/RightHand ForeArm/unusedRightForeArmRoll/RightHand
+      Hand/RightHand Thumb 1/RightHand Thumb 2/RightHand Thumb 3/unusedRightHandThumb4/unusedRightHandThumb4_end
+    m_Weight: 1
+  - m_Path: armature/Root 1/unusedposition_locator
+    m_Weight: 1
+  - m_Path: armature/Root 1/unusedposition_locator/unusedposition_locator_end
+    m_Weight: 1
+  - m_Path: Camera
+    m_Weight: 1
+  - m_Path: Lamp
+    m_Weight: 1
+  - m_Path: Lamp.001
+    m_Weight: 1
+  - m_Path: Plane
+    m_Weight: 1
+  - m_Path: Sphere
+    m_Weight: 1
+  - m_Path: Sphere.001
+    m_Weight: 1

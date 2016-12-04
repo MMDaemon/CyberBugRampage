@@ -22,7 +22,7 @@ public class Melee : MonoBehaviour
 		{
 			StartAttack();
 		}
-		else if (!_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.Slap"))
+		else if (!_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.Hit"))
 		{
 			FinishAttack();
 		}

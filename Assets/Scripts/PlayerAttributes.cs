@@ -85,7 +85,7 @@ public class PlayerAttributes : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.collider.tag.Equals("Enemy"))
+		if (collision.collider.tag.Equals("EnemyMeleeCollider"))
 		{
 			DealDamage(10);
 		}
