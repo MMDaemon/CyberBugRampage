@@ -10,12 +10,9 @@ public class Enemy : MonoBehaviour
 	[SerializeField]
 	float Droprate = 0.7f;
 
-	private Transform player;
-
 	// Use this for initialization
 	void Start()
 	{
-		player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 
 	void OnTriggerEnter(Collider collider)

@@ -604,6 +604,11 @@ Prefab:
       propertyPath: m_Center.y
       value: -0.0008
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011060051402, guid: 647d9260f2979a24fa4e5162d954c172,
+        type: 2}
+      propertyPath: RecoverySpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 647d9260f2979a24fa4e5162d954c172, type: 2}
   m_IsPrefabParent: 0
