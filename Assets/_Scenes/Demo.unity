@@ -482,18 +482,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b468e5c878d13e438445e07127524a2, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1148882307 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000012615825868, guid: 2b468e5c878d13e438445e07127524a2,
-    type: 2}
-  m_PrefabInternal: {fileID: 713033290}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!114 &1637929548 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000011949082072, guid: 2b468e5c878d13e438445e07127524a2,
-    type: 2}
-  m_PrefabInternal: {fileID: 713033290}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1739094444
 Prefab:
   m_ObjectHideFlags: 0
@@ -579,36 +567,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114000011060051402, guid: 647d9260f2979a24fa4e5162d954c172,
+    - target: {fileID: 137000013814596996, guid: 647d9260f2979a24fa4e5162d954c172,
         type: 2}
-      propertyPath: HpText
+      propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1148882307}
-    - target: {fileID: 114000011060051402, guid: 647d9260f2979a24fa4e5162d954c172,
+      objectReference: {fileID: 2100000, guid: f2af59c642ea683489717cabb360fe69, type: 2}
+    - target: {fileID: 137000013454040344, guid: 647d9260f2979a24fa4e5162d954c172,
         type: 2}
-      propertyPath: EnergyText
+      propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1637929548}
-    - target: {fileID: 65000011953918614, guid: 647d9260f2979a24fa4e5162d954c172,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.0015
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000011953918614, guid: 647d9260f2979a24fa4e5162d954c172,
-        type: 2}
-      propertyPath: m_Size.y
-      value: -0.006
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000011953918614, guid: 647d9260f2979a24fa4e5162d954c172,
-        type: 2}
-      propertyPath: m_Center.y
-      value: -0.0008
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011060051402, guid: 647d9260f2979a24fa4e5162d954c172,
-        type: 2}
-      propertyPath: RecoverySpeed
-      value: 10
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: f2af59c642ea683489717cabb360fe69, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 647d9260f2979a24fa4e5162d954c172, type: 2}
   m_IsPrefabParent: 0

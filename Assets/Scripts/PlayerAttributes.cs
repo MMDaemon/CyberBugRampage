@@ -10,8 +10,6 @@ public class PlayerAttributes : MonoBehaviour
 	public float EnergyDrainSpeed = 10;
 	public float RecoveryWait = 5;
 	public float RecoverySpeed = 5;
-	public Text HpText;
-	public Text EnergyText;
 
 	public float HP { get; private set; }
 	public float Energy { get; private set; }
@@ -23,7 +21,6 @@ public class PlayerAttributes : MonoBehaviour
 	{
 		HP = MaxHp;
 		Energy = MaxEnergy;
-		UpdateTexts();
 	}
 
 	// Update is called once per frame
@@ -35,7 +32,6 @@ public class PlayerAttributes : MonoBehaviour
 		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
 		}
-		UpdateTexts();
 	}
 
 	public bool AddEnergy(float amount)
@@ -58,12 +54,6 @@ public class PlayerAttributes : MonoBehaviour
 	{
 		HP -= amount;
 		ResetRecoveryTimer();
-	}
-
-	private void UpdateTexts()
-	{
-		HpText.text = "HP: " + (int)HP;
-		EnergyText.text = "Energy: " + (int)Energy;
 	}
 
 	private void CheckRecovery()

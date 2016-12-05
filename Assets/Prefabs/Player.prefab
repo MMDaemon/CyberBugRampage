@@ -4832,8 +4832,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.001, y: -0.002, z: 0.001}
-  m_Center: {x: 0, y: 0.0008, z: 0}
+  m_Size: {x: 0.0015, y: -0.006, z: 0.001}
+  m_Center: {x: 0, y: -0.0008, z: 0}
 --- !u!95 &95000010927679478
 Animator:
   serializedVersion: 3
@@ -4902,9 +4902,7 @@ MonoBehaviour:
   MaxEnergy: 250
   EnergyDrainSpeed: 10
   RecoveryWait: 5
-  RecoverySpeed: 5
-  HpText: {fileID: 0}
-  EnergyText: {fileID: 0}
+  RecoverySpeed: 10
 --- !u!114 &114000011250695450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5980,7 +5978,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f2af59c642ea683489717cabb360fe69, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -6151,7 +6149,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f2af59c642ea683489717cabb360fe69, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}

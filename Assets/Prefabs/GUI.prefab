@@ -56,6 +56,7 @@ GameObject:
   - 223: {fileID: 223000013232912816}
   - 114: {fileID: 114000013298275058}
   - 114: {fileID: 114000012160779086}
+  - 114: {fileID: 114000014251189004}
   m_Layer: 5
   m_Name: GUI
   m_TagString: Untagged
@@ -166,6 +167,19 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114000014251189004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012654042110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03bbe5618ba47954d822447913dbfb5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: {fileID: 114000012615825868}
+  Energy: {fileID: 114000011949082072}
 --- !u!222 &222000011142781266
 CanvasRenderer:
   m_ObjectHideFlags: 1
