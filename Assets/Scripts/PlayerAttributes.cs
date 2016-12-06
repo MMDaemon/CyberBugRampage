@@ -30,6 +30,7 @@ public class PlayerAttributes : MonoBehaviour
 		Energy -= Time.deltaTime * EnergyDrainSpeed;
 		if (Energy <= 0 || HP <= 0)
 		{
+			GameObject.FindGameObjectWithTag("SpawnerMaster").GetComponent<SpawnerMaster>().ResetPools();
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
 		}
 	}

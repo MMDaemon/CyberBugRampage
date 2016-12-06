@@ -10,9 +10,12 @@ public class Enemy : MonoBehaviour
 	[SerializeField]
 	float Droprate = 0.7f;
 
+	private SpawnerMaster _spawnerMaster;
+
 	// Use this for initialization
 	void Start()
 	{
+		_spawnerMaster = GameObject.FindGameObjectWithTag("SpawnerMaster").GetComponent<SpawnerMaster>();
 	}
 
 	void OnTriggerEnter(Collider collider)
@@ -21,11 +24,10 @@ public class Enemy : MonoBehaviour
 		{
 			if (Random.Range(0.0f, 1.0f) <= Droprate)
 			{
-				GameObject energyOrb = GameObject.Instantiate(EnergyOrbPrefab);
+				GameObject energyOrb = _spawnerMaster.PullEnergyOrb();
 				energyOrb.transform.position = this.transform.position+Vector3.up;
 			}
-			gameObject.SetActive(false);
-
+			_spawnerMaster.PushEnemy(gameObject);
 		}
 	}
 }

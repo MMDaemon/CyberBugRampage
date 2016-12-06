@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnergyOrb : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
+public class EnergyOrb : MonoBehaviour
+{
+	private SpawnerMaster _spawnerMaster;
+	void Start ()
+	{
+		_spawnerMaster = GameObject.FindGameObjectWithTag("SpawnerMaster").GetComponent<SpawnerMaster>();
 	}
 
 	void OnTriggerStay(Collider collider)
@@ -14,7 +15,7 @@ public class EnergyOrb : MonoBehaviour {
 		{
 			if (collider.GetComponent<PlayerAttributes>().AddEnergy(50))
 			{
-				transform.parent.gameObject.SetActive(false);
+				_spawnerMaster.PushEnergyOrb(transform.parent.gameObject);
 			}
 		}
 	}
