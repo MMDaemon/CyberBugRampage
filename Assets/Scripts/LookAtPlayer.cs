@@ -41,7 +41,7 @@ public class LookAtPlayer : MonoBehaviour
 		//	transform.eulerAngles -= rotationX;
 		//}
 		float xMove = Input.GetAxis("Mouse X");
-		if (Mathf.Abs(xMove) > 0.1)
+		if (Mathf.Abs(xMove) > 0.2)
 		{
 			Vector3 rotationY = new Vector3(0.0f, SpeedH * xMove, 0.0f);
 			transform.eulerAngles += rotationY;
