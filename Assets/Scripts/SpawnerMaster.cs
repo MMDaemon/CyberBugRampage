@@ -13,14 +13,14 @@ public class SpawnerMaster : MonoBehaviour
 	private ObjectPool _enemyPool;
 	private ObjectPool _energyOrbPool;
 
-	public static SpawnerMaster Instance { get; private set; }
+	private static SpawnerMaster _instance;
 
 	// Use this for initialization
 	void Start()
 	{
-		if (Instance == null)
+		if (_instance == null)
 		{
-			Instance = this;
+			_instance = this;
 			DontDestroyOnLoad(gameObject);
 			AddObectPool(EnemyPrefab, EnemyInitialAmount);
 			AddObectPool(EnergyOrbPrefab, EnergyOrbInitialAmount);
@@ -34,7 +34,7 @@ public class SpawnerMaster : MonoBehaviour
 		}
 		else
 		{
-			if (Instance != this)
+			if (_instance != this)
 			{
 				Destroy(gameObject);
 			}

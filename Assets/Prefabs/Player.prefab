@@ -4903,6 +4903,7 @@ MonoBehaviour:
   EnergyDrainSpeed: 10
   RecoveryWait: 5
   RecoverySpeed: 10
+  MinHeight: -5
 --- !u!114 &114000011250695450
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -11,16 +11,21 @@ public class PlayerAttributes : MonoBehaviour
 	public float RecoveryWait = 5;
 	public float RecoverySpeed = 5;
 
+	public float MinHeight = -5;
+
 	public float HP { get; private set; }
 	public float Energy { get; private set; }
 
 	private float _recoveryTimer = 0;
+
+	private Vector3 _spawnPos;
 
 	// Use this for initialization
 	void Start()
 	{
 		HP = MaxHp;
 		Energy = MaxEnergy;
+		_spawnPos = transform.position;
 	}
 
 	// Update is called once per frame
@@ -30,8 +35,11 @@ public class PlayerAttributes : MonoBehaviour
 		Energy -= Time.deltaTime * EnergyDrainSpeed;
 		if (Energy <= 0 || HP <= 0)
 		{
-			GameObject.FindGameObjectWithTag("SpawnerMaster").GetComponent<SpawnerMaster>().ResetPools();
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+			GameOver();
+		}
+		if (transform.position.y < MinHeight)
+		{
+			transform.position = _spawnPos;
 		}
 	}
 
@@ -80,6 +88,13 @@ public class PlayerAttributes : MonoBehaviour
 		{
 			DealDamage(10);
 		}
+	}
+
+	private void GameOver()
+	{
+		GameObject.FindGameObjectWithTag("SpawnerMaster").GetComponent<SpawnerMaster>().ResetPools();
+		GameObject.FindGameObjectWithTag("Score").GetComponent<Score>().Stop();
+		SceneManager.LoadScene("GameOver");
 	}
 
 
