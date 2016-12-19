@@ -43,6 +43,11 @@ public class PlayerAttributes : MonoBehaviour
 		}
 	}
 
+	public bool CanCollectOrb(float energyAmount)
+	{
+		return Energy + energyAmount <= MaxEnergy;
+	}
+
 	public bool AddEnergy(float amount)
 	{
 		if (Energy + amount <= MaxEnergy)
@@ -82,9 +87,9 @@ public class PlayerAttributes : MonoBehaviour
 		}
 	}
 
-	void OnCollisionEnter(Collision collision)
+	void OnTriggerEnter(Collider collider)
 	{
-		if (collision.collider.tag.Equals("EnemyMeleeCollider"))
+		if (collider.tag.Equals("EnemyMeleeCollider"))
 		{
 			DealDamage(10);
 		}

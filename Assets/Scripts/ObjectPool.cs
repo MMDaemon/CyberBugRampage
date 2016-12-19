@@ -4,19 +4,22 @@ using System.Collections.Generic;
 public class ObjectPool : MonoBehaviour {
 
 	public GameObject ObjectPrefab;
-	public int InitialAmount = 500;
-	public bool CreateOnEmptyList = true;
+	int _initialAmount = 500;
+	bool _createOnEmptyList = true;
 
 	private Queue<GameObject> _objectList;
 	private List<GameObject> _objectFreeList;
 
 	// Use this for initialization
-	void Start () {
+	public void Init (GameObject prefab, int initialAmount, bool createOnEmptyList) {
+		ObjectPrefab = prefab;
+		_initialAmount = initialAmount;
+		_createOnEmptyList = createOnEmptyList;
 		DontDestroyOnLoad(this);
 		_objectList = new Queue<GameObject>();
 		_objectFreeList = new List<GameObject>();
 
-		AddToPool(InitialAmount);
+		AddToPool(_initialAmount);
 	}
 
 	private GameObject CreateObject()
@@ -55,7 +58,7 @@ public class ObjectPool : MonoBehaviour {
 		}
 		else
 		{
-			if (CreateOnEmptyList)
+			if (_createOnEmptyList)
 			{
 				obj = CreateObject();
 				_objectFreeList.Add(obj);

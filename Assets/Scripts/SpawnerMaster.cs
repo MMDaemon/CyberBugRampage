@@ -50,9 +50,7 @@ public class SpawnerMaster : MonoBehaviour
 	private void AddObectPool(GameObject prefab, int initialAmount)
 	{
 		ObjectPool pool = gameObject.AddComponent<ObjectPool>();
-		pool.ObjectPrefab = prefab;
-		pool.InitialAmount = initialAmount;
-		pool.CreateOnEmptyList = CreateOnEmptyList;
+		pool.Init(prefab, initialAmount, CreateOnEmptyList);
 	}
 
 	public GameObject PullEnemy()
