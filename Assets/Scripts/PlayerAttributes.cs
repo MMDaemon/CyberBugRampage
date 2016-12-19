@@ -8,9 +8,10 @@ public class PlayerAttributes : MonoBehaviour
 	public float MaxHp = 100;
 	public float MaxEnergy = 250;
 	public float EnergyDrainSpeed = 10;
+	public float MinEnergyToRecover = 50;
 	public float RecoveryWait = 5;
 	public float RecoverySpeed = 5;
-
+	public float EnergyOnRecoveryMultiplier = 1;
 	public float MinHeight = -5;
 
 	public float HP { get; private set; }
@@ -33,7 +34,15 @@ public class PlayerAttributes : MonoBehaviour
 	{
 		CheckRecovery();
 		Energy -= Time.deltaTime * EnergyDrainSpeed;
-		if (Energy <= 0 || HP <= 0)
+		if (Energy < 0)
+		{
+			Energy = 0;
+		}
+		if (HP < 0)
+		{
+			HP = 0;
+		}
+		if (Energy == 0 || HP == 0)
 		{
 			GameOver();
 		}
@@ -73,7 +82,7 @@ public class PlayerAttributes : MonoBehaviour
 	private void CheckRecovery()
 	{
 		_recoveryTimer += Time.deltaTime;
-		if (_recoveryTimer >= RecoveryWait && HP < MaxHp)
+		if (_recoveryTimer >= RecoveryWait && HP < MaxHp && Energy > MinEnergyToRecover)
 		{
 			float healthGain = Time.deltaTime * RecoverySpeed;
 			float healthNeed = MaxHp - HP;
@@ -83,7 +92,7 @@ public class PlayerAttributes : MonoBehaviour
 			}
 
 			HP += healthGain;
-			Energy -= healthGain;
+			Energy -= healthGain = EnergyOnRecoveryMultiplier;
 		}
 	}
 
