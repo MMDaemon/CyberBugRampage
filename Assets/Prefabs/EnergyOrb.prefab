@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca433a8506be8a443b8da7e8fdce5097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SuctionStrength: 1
+  SuctionStrength: 10
   CollectionRadius: {fileID: 1000011238817316}
 --- !u!135 &135000010292256244
 SphereCollider:
