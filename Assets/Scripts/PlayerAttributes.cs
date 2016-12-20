@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,13 +14,19 @@ public class PlayerAttributes : MonoBehaviour
 	public float RecoverySpeed = 5;
 	public float EnergyOnRecoveryMultiplier = 1;
 	public float MinHeight = -5;
+	public float RecoveryTimer = 0;
 
 	public float HP { get; private set; }
 	public float Energy { get; private set; }
 
-	private float _recoveryTimer = 0;
-
 	private Vector3 _spawnPos;
+
+	public EventHandler DamageDealt;
+
+	private void OnDamageDealt()
+	{
+		DamageDealt.Invoke(this, new EventArgs());
+	}
 
 	// Use this for initialization
 	void Start()
@@ -42,7 +49,7 @@ public class PlayerAttributes : MonoBehaviour
 		{
 			HP = 0;
 		}
-		if (Energy == 0 || HP == 0)
+		if (Energy <= 0 || HP <= 0)
 		{
 			GameOver();
 		}
@@ -70,29 +77,40 @@ public class PlayerAttributes : MonoBehaviour
 
 	public void ResetRecoveryTimer()
 	{
-		_recoveryTimer = 0;
+		RecoveryTimer = 0;
 	}
 
 	public void DealDamage(float amount)
 	{
-		HP -= amount;
-		ResetRecoveryTimer();
+		if (amount > 0)
+		{
+			HP -= amount;
+			ResetRecoveryTimer();
+			OnDamageDealt();
+		}
 	}
 
 	private void CheckRecovery()
 	{
-		_recoveryTimer += Time.deltaTime;
-		if (_recoveryTimer >= RecoveryWait && HP < MaxHp && Energy > MinEnergyToRecover)
+		if (HP < MaxHp)
 		{
-			float healthGain = Time.deltaTime * RecoverySpeed;
-			float healthNeed = MaxHp - HP;
-			if (healthGain > healthNeed)
+			RecoveryTimer += Time.deltaTime;
+			if (RecoveryTimer >= RecoveryWait && Energy > MinEnergyToRecover)
 			{
-				healthGain = healthNeed;
-			}
+				float healthGain = Time.deltaTime * RecoverySpeed;
+				float healthNeed = MaxHp - HP;
+				if (healthGain > healthNeed)
+				{
+					healthGain = healthNeed;
+				}
 
-			HP += healthGain;
-			Energy -= healthGain = EnergyOnRecoveryMultiplier;
+				HP += healthGain;
+				Energy -= healthGain = EnergyOnRecoveryMultiplier;
+			}
+		}
+		else
+		{
+			RecoveryTimer = 0;
 		}
 	}
 
@@ -100,7 +118,7 @@ public class PlayerAttributes : MonoBehaviour
 	{
 		if (collider.tag.Equals("EnemyMeleeCollider"))
 		{
-			DealDamage(10);
+			DealDamage(collider.gameObject.GetComponent<EnemyHandCollider>().GetDamage());
 		}
 	}
 
@@ -110,6 +128,4 @@ public class PlayerAttributes : MonoBehaviour
 		GameObject.FindGameObjectWithTag("Score").GetComponent<Score>().Stop();
 		SceneManager.LoadScene("GameOver");
 	}
-
-
 }

@@ -25,7 +25,6 @@ public class EnergyOrbSuction : MonoBehaviour
 			float distance = 1 + Vector3.Distance(collider.transform.position + Vector3.up, GetComponentInParent<Transform>().position);
 			Vector3 suctionDirection = (collider.transform.position + Vector3.up) - GetComponentInParent<Transform>().position;
 			suctionDirection = suctionDirection.normalized;
-			Debug.Log(suctionDirection);
 			_parentRigidbody.constraints = RigidbodyConstraints.None;
 			_parentRigidbody.velocity = suctionDirection * (SuctionStrength/distance);
 		}

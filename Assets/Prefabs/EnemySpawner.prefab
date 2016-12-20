@@ -53,6 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 1000012887748632, guid: adebd4f9bfce52e49b27c18663c7948e,
     type: 2}
-  TimeValue: 3
-  TimeScope: 2.5
+  TimeValue: 6
+  TimeScope: 5.5
   MinDist: 5

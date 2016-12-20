@@ -16,7 +16,7 @@ public class MeleeEnemy : MonoBehaviour
 	private float _movingTurnSpeed;
 
 	// Use this for initialization
-	void Start ()
+	void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player").transform;
 		_controller = gameObject.GetComponent<ThirdPersonCharacter>();
@@ -26,21 +26,28 @@ public class MeleeEnemy : MonoBehaviour
 		RightHandCollider.enabled = false;
 		_attacking = false;
 	}
-	
+
 	// Update is called once per frame
-	void FixedUpdate ()
+	void FixedUpdate()
 	{
-		if (!_attacking && Vector2.Distance(transform.position, player.position)<MinAttackDistance)
+		if (this.transform != null)
 		{
-			StartAttack();
-		}
-		else if (!_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.Hit"))
-		{
-			FinishAttack();
-		}
-		else
-		{
-			_animator.SetBool("Hit", false);
+			if (!_attacking && Vector2.Distance(transform.position, player.position) < MinAttackDistance)
+			{
+				StartAttack();
+			}
+			else if (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+			{
+				FinishAttack();
+			}
+			else
+			{
+				_animator.SetBool("Hit", false);
+			}
+			if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+			{
+				RightHandCollider.enabled = true;
+			}
 		}
 	}
 
@@ -48,7 +55,6 @@ public class MeleeEnemy : MonoBehaviour
 	{
 		_attacking = true;
 		_animator.SetBool("Hit", true);
-		RightHandCollider.enabled = true;
 		_controller.m_MovingTurnSpeed = 0;
 		_controller.m_StationaryTurnSpeed = 0;
 	}

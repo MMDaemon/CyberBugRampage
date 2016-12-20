@@ -23,15 +23,29 @@ public class Melee : MonoBehaviour
 	{
 		if (Input.GetButton("Fire1"))
 		{
-			StartAttack();
+			StartAttack("Fire1");
 		}
-		else if (!_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.Hit"))
+		if (Input.GetButton("Fire2"))
 		{
-			FinishAttack();
+			StartAttack("Fire2");
 		}
-		if(_hitTimer <= 0)
+		EvaluateHitTimer();
+		SetCollidersByAnimations();
+	}
+
+	private void StartAttack(string buttonName)
+	{
+		GetComponent<PlayerAttributes>().ResetRecoveryTimer();
+		_hitTimer = 0.3f;
+		_animator.SetBool(buttonName, true);
+	}
+
+	private void EvaluateHitTimer()
+	{
+		if (_hitTimer <= 0)
 		{
-			_animator.SetBool("Hit", false);
+			_animator.SetBool("Fire1", false);
+			_animator.SetBool("Fire2", false);
 		}
 		else
 		{
@@ -39,18 +53,17 @@ public class Melee : MonoBehaviour
 		}
 	}
 
-	private void StartAttack()
+	private void SetCollidersByAnimations()
 	{
-		GetComponent<PlayerAttributes>().ResetRecoveryTimer();
-		_hitTimer = 0.3f;
-		_animator.SetBool("Hit", true);
-		RightHandCollider.enabled = true;
-		LeftHandCollider.enabled = true;
-	}
-
-	private void FinishAttack()
-	{
-		RightHandCollider.enabled = false;
 		LeftHandCollider.enabled = false;
+		RightHandCollider.enabled = false;
+		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.LightHit"))
+		{
+			RightHandCollider.enabled = true;
+		}
+		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.LightHit2"))
+		{
+			LeftHandCollider.enabled = true;
+		}
 	}
 }
