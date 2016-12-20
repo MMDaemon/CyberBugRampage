@@ -15,11 +15,15 @@ public class PlayerAttributes : MonoBehaviour
 	public float EnergyOnRecoveryMultiplier = 1;
 	public float MinHeight = -5;
 	public float RecoveryTimer = 0;
+	[Range(0.0f, 1.0f)]
+	[SerializeField]
+	float BlockAbsorption = 0.7f;
 
 	public float HP { get; private set; }
 	public float Energy { get; private set; }
 
 	private Vector3 _spawnPos;
+	private Animator _animator;
 
 	public EventHandler DamageDealt;
 
@@ -34,6 +38,7 @@ public class PlayerAttributes : MonoBehaviour
 		HP = MaxHp;
 		Energy = MaxEnergy;
 		_spawnPos = transform.position;
+		_animator = GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
@@ -84,9 +89,16 @@ public class PlayerAttributes : MonoBehaviour
 	{
 		if (amount > 0)
 		{
-			HP -= amount;
-			ResetRecoveryTimer();
-			OnDamageDealt();
+			if (!_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.Blocking"))
+			{
+				HP -= amount;
+				ResetRecoveryTimer();
+				OnDamageDealt();
+			}else
+			{
+				HP -= (1-BlockAbsorption)*amount;
+				OnDamageDealt();
+			}
 		}
 	}
 

@@ -9,6 +9,7 @@ public class Melee : MonoBehaviour
 
 	private Animator _animator;
 	private float _hitTimer = 0;
+	private bool blocking = false;
 
 	// Use this for initialization
 	void Start ()
@@ -29,8 +30,16 @@ public class Melee : MonoBehaviour
 		{
 			StartAttack("Fire2");
 		}
+		if (Input.GetButton("Block"))
+		{
+			_animator.SetBool("Block", true);
+		}
+		else
+		{
+			_animator.SetBool("Block", false);
+		}
 		EvaluateHitTimer();
-		SetCollidersByAnimations();
+		EvaluateAnimations();
 	}
 
 	private void StartAttack(string buttonName)
@@ -53,7 +62,7 @@ public class Melee : MonoBehaviour
 		}
 	}
 
-	private void SetCollidersByAnimations()
+	private void EvaluateAnimations()
 	{
 		LeftHandCollider.enabled = false;
 		RightHandCollider.enabled = false;

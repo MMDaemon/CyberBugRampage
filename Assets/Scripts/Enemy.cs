@@ -11,12 +11,14 @@ public class Enemy : MonoBehaviour
 	[SerializeField]
 	float Droprate = 0.7f;
 
+	private Animator _animator;
 	private SpawnerMaster _spawnerMaster;
 	float _health;
 
 	// Use this for initialization
 	void Start()
 	{
+		_animator = GetComponent<Animator>();
 		_spawnerMaster = GameObject.FindGameObjectWithTag("SpawnerMaster").GetComponent<SpawnerMaster>();
 		_health = MaxHealth;
 	}
@@ -25,7 +27,8 @@ public class Enemy : MonoBehaviour
 	{
 		if (collider.tag.Equals("MeleeCollider"))
 		{
-			DealDamage(20);
+			_animator.SetTrigger("Damaged");
+			DealDamage(10);
 			if (_health <= 0)
 			{
 				Die();
