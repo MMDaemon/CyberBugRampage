@@ -2589,8 +2589,9 @@ MonoBehaviour:
   EnergyOrbPrefab: {fileID: 1000012642981794, guid: d52df04145e1fec40b9f7dff4f4a06ba,
     type: 2}
   Speed: 1
-  MaxHealth: 50
+  MaxHealth: 30
   Droprate: 0.7
+  _playerMelee: {fileID: 0}
 --- !u!114 &114000012560210232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2602,7 +2603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a250595c3744446a0f82c318aa44bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 5
   ParentAnimator: {fileID: 95000010683204628}
 --- !u!136 &136000011833966102
 CapsuleCollider:

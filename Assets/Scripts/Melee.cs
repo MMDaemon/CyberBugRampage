@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class Melee : MonoBehaviour
@@ -6,10 +7,13 @@ public class Melee : MonoBehaviour
 
 	public Collider RightHandCollider;
 	public Collider LeftHandCollider;
+	public float LightAttackDamage = 10;
 
 	private Animator _animator;
 	private float _hitTimer = 0;
-	private bool blocking = false;
+	private bool _hitting = false;
+	private float _currentAttackDamage = 0;
+	private string _beforeAttack = string.Empty;
 
 	// Use this for initialization
 	void Start ()
@@ -66,13 +70,48 @@ public class Melee : MonoBehaviour
 	{
 		LeftHandCollider.enabled = false;
 		RightHandCollider.enabled = false;
+		_hitting = false;
+		_currentAttackDamage = 0;
 		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.LightHit"))
 		{
+			_currentAttackDamage = LightAttackDamage;
 			RightHandCollider.enabled = true;
+			if (_beforeAttack.Equals("Torso Layer.LightHit"))
+			{
+				_hitting = true;
+			}
+			_beforeAttack = "Torso Layer.LightHit";
+
+
+		}
+		else if(_beforeAttack.Equals("Torso Layer.LightHit"))
+		{
+			_beforeAttack = string.Empty;
 		}
 		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.LightHit2"))
 		{
+			_currentAttackDamage = LightAttackDamage;
 			LeftHandCollider.enabled = true;
+			_hitting = true;
+			if (_beforeAttack.Equals("Torso Layer.LightHit2"))
+			{
+				_hitting = true;
+			}
+			_beforeAttack = "Torso Layer.LightHit2";
 		}
+		else if (_beforeAttack.Equals("Torso Layer.LightHit2"))
+		{
+			_beforeAttack = string.Empty;
+		}
+	}
+
+	public bool Hitting
+	{
+		get { return _hitting; }
+	}
+
+	public float AttackDamage
+	{
+		get { return _currentAttackDamage; }
 	}
 }

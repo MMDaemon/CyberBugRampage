@@ -14,25 +14,37 @@ public class Enemy : MonoBehaviour
 	private Animator _animator;
 	private SpawnerMaster _spawnerMaster;
 	float _health;
+	public Melee _playerMelee;
+	bool _hitLeft = true;
 
 	// Use this for initialization
 	void Start()
 	{
 		_animator = GetComponent<Animator>();
 		_spawnerMaster = GameObject.FindGameObjectWithTag("SpawnerMaster").GetComponent<SpawnerMaster>();
+		_playerMelee = GameObject.FindGameObjectWithTag("Player").GetComponent<Melee>();
 		_health = MaxHealth;
 	}
 
 	void OnTriggerEnter(Collider collider)
 	{
-		if (collider.tag.Equals("MeleeCollider"))
+		if (collider.tag.Equals("MeleeCollider")&&_hitLeft)
 		{
+			_hitLeft = false;
 			_animator.SetTrigger("Damaged");
-			DealDamage(10);
+			DealDamage(_playerMelee.AttackDamage);
 			if (_health <= 0)
 			{
 				Die();
 			}
+		}
+	}
+
+	void FixedUpdate()
+	{
+		if (!_playerMelee.Hitting)
+		{
+			_hitLeft = true;
 		}
 	}
 

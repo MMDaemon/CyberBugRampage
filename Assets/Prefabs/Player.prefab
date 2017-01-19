@@ -2046,9 +2046,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011185557282}
+  - 65: {fileID: 65000011228558374}
   m_Layer: 0
   m_Name: LeftHand Hand
-  m_TagString: Untagged
+  m_TagString: MeleeCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3173,7 +3174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010912504796}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.6321466, y: -0.826004, z: 59.185226}
+  m_LocalPosition: {x: -0.5408898, y: -0.8260039, z: 60.341805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children:
@@ -4822,6 +4823,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65000011228558374
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013522228154}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0015, y: 0.006, z: 0.001}
+  m_Center: {x: 0, y: -0.0008, z: 0}
 --- !u!65 &65000011953918614
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4832,7 +4845,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0015, y: -0.006, z: 0.001}
+  m_Size: {x: 0.0015, y: 0.006, z: 0.001}
   m_Center: {x: 0, y: -0.0008, z: 0}
 --- !u!95 &95000010927679478
 Animator:
@@ -4901,9 +4914,13 @@ MonoBehaviour:
   MaxHp: 100
   MaxEnergy: 250
   EnergyDrainSpeed: 10
-  RecoveryWait: 5
+  MinEnergyToRecover: 50
+  RecoveryWait: 3
   RecoverySpeed: 10
+  EnergyOnRecoveryMultiplier: 0.5
   MinHeight: -10
+  RecoveryTimer: 0
+  BlockAbsorption: 0.7
 --- !u!114 &114000011250695450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4916,6 +4933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RightHandCollider: {fileID: 65000011953918614}
+  LeftHandCollider: {fileID: 65000011228558374}
 --- !u!114 &114000011895127616
 MonoBehaviour:
   m_ObjectHideFlags: 1
