@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014075287768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -13.17}
+  m_LocalPosition: {x: -0.7316087, y: -0.82600397, z: 59.41888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -53,6 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 1000012887748632, guid: adebd4f9bfce52e49b27c18663c7948e,
     type: 2}
-  TimeValue: 6
+  TimeValue: 10
   TimeScope: 5.5
   MinDist: 5

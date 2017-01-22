@@ -12,16 +12,20 @@ public class Enemy : MonoBehaviour
 	float Droprate = 0.7f;
 
 	private Animator _animator;
+	private Rigidbody _rigidbody;
 	private SpawnerMaster _spawnerMaster;
 	float _health;
 	public Melee _playerMelee;
+	public Transform _playerTransform;
 	bool _hitLeft = true;
 
 	// Use this for initialization
 	void Start()
 	{
 		_animator = GetComponent<Animator>();
+		_rigidbody = GetComponent<Rigidbody>();
 		_spawnerMaster = GameObject.FindGameObjectWithTag("SpawnerMaster").GetComponent<SpawnerMaster>();
+		_playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 		_playerMelee = GameObject.FindGameObjectWithTag("Player").GetComponent<Melee>();
 		_health = MaxHealth;
 	}
@@ -37,6 +41,12 @@ public class Enemy : MonoBehaviour
 			{
 				Die();
 			}
+		}
+
+		if (collider.tag.Equals("PulseSphere"))
+		{
+			_animator.SetTrigger("Stunned");
+			_rigidbody.AddForce(Vector3.Normalize(_playerTransform.position - transform.position)*1000);
 		}
 	}
 

@@ -7,6 +7,8 @@ public class Melee : MonoBehaviour
 
 	public Collider RightHandCollider;
 	public Collider LeftHandCollider;
+	public GameObject PulseSphere;
+	public Animation PulseSphereAnimation;
 	public float LightAttackDamage = 10;
 
 	private Animator _animator;
@@ -102,6 +104,11 @@ public class Melee : MonoBehaviour
 		else if (_beforeAttack.Equals("Torso Layer.LightHit2"))
 		{
 			_beforeAttack = string.Empty;
+		}
+
+		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.BlockingLightHit"))
+		{
+			PulseSphereAnimation.Play("Puls Sphere Forward");
 		}
 	}
 

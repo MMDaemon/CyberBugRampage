@@ -9,6 +9,7 @@ TagManager:
   - EnemyMeleeCollider
   - SpawnerMaster
   - Score
+  - PulseSphere
   layers:
   - Default
   - TransparentFX

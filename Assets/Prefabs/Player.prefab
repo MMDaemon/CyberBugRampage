@@ -4934,6 +4934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RightHandCollider: {fileID: 65000011953918614}
   LeftHandCollider: {fileID: 65000011228558374}
+  LightAttackDamage: 10
 --- !u!114 &114000011895127616
 MonoBehaviour:
   m_ObjectHideFlags: 1
