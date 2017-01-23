@@ -48,6 +48,13 @@ public class Enemy : MonoBehaviour
 			_animator.SetTrigger("Stunned");
 			_rigidbody.AddForce(Vector3.Normalize(_playerTransform.position - transform.position)*1000);
 		}
+
+		if (collider.tag.Equals("DamageSphere"))
+		{
+			_animator.SetTrigger("Damaged");
+			DealDamage(10);
+			_rigidbody.AddForce(Vector3.Normalize(_playerTransform.position - transform.position) * 1000);
+		}
 	}
 
 	void FixedUpdate()

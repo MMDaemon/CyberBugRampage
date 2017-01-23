@@ -8,8 +8,8 @@ public class Melee : MonoBehaviour
 
 	public Collider RightHandCollider;
 	public Collider LeftHandCollider;
-	public GameObject PulseSphere;
 	public Animation PulseSphereAnimation;
+	public Animation DamageSphereAnimation;
 	public float LightAttackDamage = 10;
 
 	private Animator _animator;
@@ -86,6 +86,7 @@ public class Melee : MonoBehaviour
 		RightHandCollider.enabled = false;
 		_hitting = false;
 		_currentAttackDamage = 0;
+
 		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.LightHit"))
 		{
 			_currentAttackDamage = LightAttackDamage;
@@ -102,6 +103,7 @@ public class Melee : MonoBehaviour
 		{
 			_beforeAttack = string.Empty;
 		}
+
 		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.LightHit2"))
 		{
 			_currentAttackDamage = LightAttackDamage;
@@ -116,6 +118,16 @@ public class Melee : MonoBehaviour
 		else if (_beforeAttack.Equals("Torso Layer.LightHit2"))
 		{
 			_beforeAttack = string.Empty;
+		}
+
+		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.JumpAttack"))
+		{
+			_beforeAttack = "Torso Layer.JumpAttack";
+		}
+		else if (_beforeAttack.Equals("Torso Layer.JumpAttack"))
+		{
+			_beforeAttack = string.Empty;
+			DamageSphereAnimation.Play("Ground Slam");
 		}
 
 		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.BlockingLightHit"))

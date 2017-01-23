@@ -10,6 +10,7 @@ TagManager:
   - SpawnerMaster
   - Score
   - PulseSphere
+  - DamageSphere
   layers:
   - Default
   - TransparentFX
