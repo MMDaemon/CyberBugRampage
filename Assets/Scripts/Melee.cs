@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Melee : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Melee : MonoBehaviour
 	public float LightAttackDamage = 10;
 
 	private Animator _animator;
-	private float _hitTimer = 0;
+	private Dictionary<string,float> _hitTimer;
 	private bool _hitting = false;
 	private float _currentAttackDamage = 0;
 	private string _beforeAttack = string.Empty;
@@ -20,6 +21,9 @@ public class Melee : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		_hitTimer = new Dictionary<string, float>();
+		_hitTimer.Add("Fire1",0);
+		_hitTimer.Add("Fire2",0);
 		_animator = GetComponent<Animator>();
 		RightHandCollider.enabled = false;
 		LeftHandCollider.enabled = false;
@@ -51,20 +55,28 @@ public class Melee : MonoBehaviour
 	private void StartAttack(string buttonName)
 	{
 		GetComponent<PlayerAttributes>().ResetRecoveryTimer();
-		_hitTimer = 0.3f;
+		_hitTimer[buttonName] = 0.3f;
 		_animator.SetBool(buttonName, true);
 	}
 
 	private void EvaluateHitTimer()
 	{
-		if (_hitTimer <= 0)
+		if (_hitTimer["Fire1"] <= 0)
 		{
 			_animator.SetBool("Fire1", false);
+		}
+		else
+		{
+			_hitTimer["Fire1"] -= Time.deltaTime;
+		}
+
+		if (_hitTimer["Fire2"] <= 0)
+		{
 			_animator.SetBool("Fire2", false);
 		}
 		else
 		{
-			_hitTimer -= Time.deltaTime;
+			_hitTimer["Fire2"] -= Time.deltaTime;
 		}
 	}
 
@@ -109,6 +121,10 @@ public class Melee : MonoBehaviour
 		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.BlockingLightHit"))
 		{
 			PulseSphereAnimation.Play("Puls Sphere Forward");
+		}
+		if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Torso Layer.BlockingHeavyHit"))
+		{
+			PulseSphereAnimation.Play("Puls Sphere Expand");
 		}
 	}
 
