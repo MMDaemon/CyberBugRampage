@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\ShowScore.cs" />
     <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\SpawnerMaster.cs" />
+    <Compile Include="Assets\Scripts\StartLevel.cs" />
     <Compile Include="Assets\Scripts\UpdateCanvas.cs" />
   </ItemGroup>
   <ItemGroup>

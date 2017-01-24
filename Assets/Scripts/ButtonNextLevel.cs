@@ -12,7 +12,7 @@ public class ButtonNextLevel : MonoBehaviour
 		{
 			Application.Quit();
 		}
-	    else if (Input.anyKey)
+	    else if (Input.GetButton("Jump"))
 	    {
 			GameObject score = GameObject.FindGameObjectWithTag("Score");
 		    if(score != null)
