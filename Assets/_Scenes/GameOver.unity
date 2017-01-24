@@ -268,7 +268,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CyberRampage - Relict without jumps
+          m_StringArgument: Relic
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511803e01abed7043989f087a1d4b4d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevelName: CyberRampage - Relict without jumps
+  NextLevelName: Relic
 --- !u!224 &1964263436
 RectTransform:
   m_ObjectHideFlags: 0
