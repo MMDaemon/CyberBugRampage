@@ -44,7 +44,11 @@ public class PlayerAttributes : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate()
 	{
-		CheckRecovery();
+        if (Input.GetButton("Cancel"))
+        {
+            Application.Quit();
+        }
+        CheckRecovery();
 		Energy -= Time.deltaTime * EnergyDrainSpeed;
 		if (Energy < 0)
 		{

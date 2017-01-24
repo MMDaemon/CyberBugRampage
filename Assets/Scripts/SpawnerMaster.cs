@@ -3,79 +3,85 @@ using System.Linq;
 
 public class SpawnerMaster : MonoBehaviour
 {
+    private float _killcount;
+    public GameObject EnemyPrefab;
+    public int EnemyInitialAmount = 500;
+    public GameObject EnergyOrbPrefab;
+    public int EnergyOrbInitialAmount = 200;
+    public bool CreateOnEmptyList = true;
 
-	public GameObject EnemyPrefab;
-	public int EnemyInitialAmount = 500;
-	public GameObject EnergyOrbPrefab;
-	public int EnergyOrbInitialAmount = 200;
-	public bool CreateOnEmptyList = true;
+    private ObjectPool _enemyPool;
+    private ObjectPool _energyOrbPool;
 
-	private ObjectPool _enemyPool;
-	private ObjectPool _energyOrbPool;
+    private static SpawnerMaster _instance;
 
-	private static SpawnerMaster _instance;
+    // Use this for initialization
+    void Start()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+            AddObectPool(EnemyPrefab, EnemyInitialAmount);
+            AddObectPool(EnergyOrbPrefab, EnergyOrbInitialAmount);
+            ObjectPool[] objectPools = GetComponents<ObjectPool>();
+            _enemyPool = (from objectPool in objectPools
+                where objectPool.ObjectPrefab.Equals(EnemyPrefab)
+                select objectPool).First();
+            _energyOrbPool = (from objectPool in objectPools
+                where objectPool.ObjectPrefab.Equals(EnergyOrbPrefab)
+                select objectPool).First();
+        }
+        else
+        {
+            if (_instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 
-	// Use this for initialization
-	void Start()
-	{
-		if (_instance == null)
-		{
-			_instance = this;
-			DontDestroyOnLoad(gameObject);
-			AddObectPool(EnemyPrefab, EnemyInitialAmount);
-			AddObectPool(EnergyOrbPrefab, EnergyOrbInitialAmount);
-			ObjectPool[] objectPools = GetComponents<ObjectPool>();
-			_enemyPool = (from objectPool in objectPools
-				where objectPool.ObjectPrefab.Equals(EnemyPrefab)
-				select objectPool).First();
-			_energyOrbPool = (from objectPool in objectPools
-				where objectPool.ObjectPrefab.Equals(EnergyOrbPrefab)
-				select objectPool).First();
-		}
-		else
-		{
-			if (_instance != this)
-			{
-				Destroy(gameObject);
-			}
-		}
-	}
+    // Update is called once per frame
+    void Update()
+    {
+    }
 
-	// Update is called once per frame
-	void Update()
-	{
+    private void AddObectPool(GameObject prefab, int initialAmount)
+    {
+        ObjectPool pool = gameObject.AddComponent<ObjectPool>();
+        pool.Init(prefab, initialAmount, CreateOnEmptyList);
+    }
 
-	}
+    public GameObject PullEnemy()
+    {
+        return _enemyPool.PullFromPool();
+    }
 
-	private void AddObectPool(GameObject prefab, int initialAmount)
-	{
-		ObjectPool pool = gameObject.AddComponent<ObjectPool>();
-		pool.Init(prefab, initialAmount, CreateOnEmptyList);
-	}
+    public void PushEnemy(GameObject enemy)
+    {
+        _killcount++;
+        _enemyPool.PushToPool(enemy);
+    }
 
-	public GameObject PullEnemy()
-	{
-		return _enemyPool.PullFromPool();
-	}
+    public GameObject PullEnergyOrb()
+    {
+        return _energyOrbPool.PullFromPool();
+    }
 
-	public void PushEnemy(GameObject enemy)
-	{
-		_enemyPool.PushToPool(enemy);
-	}
+    public void PushEnergyOrb(GameObject energyOrb)
+    {
+        _energyOrbPool.PushToPool(energyOrb);
+    }
 
-	public GameObject PullEnergyOrb()
-	{
-		return _energyOrbPool.PullFromPool();
-	}
+    public void ResetPools()
+    {
+	    _killcount = 0;
+        _enemyPool.Reset();
+        _energyOrbPool.Reset();
+    }
 
-	public void PushEnergyOrb(GameObject energyOrb)
-	{
-		_energyOrbPool.PushToPool(energyOrb);
-	}
-
-	public void ResetPools()
-	{
-		_enemyPool.Reset();
-		_energyOrbPool.Reset();
-	}
+    public float getKillCount()
+    {
+        return _killcount;
+    }
 }

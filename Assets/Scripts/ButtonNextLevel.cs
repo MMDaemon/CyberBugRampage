@@ -8,19 +8,23 @@ public class ButtonNextLevel : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if (Input.GetButton("Jump"))
-		{
-			GameObject.FindGameObjectWithTag("Score").GetComponent<Score>().Reset();
-			SceneManager.LoadScene(NextLevelName);
-		}
 		if (Input.GetButton("Cancel"))
 		{
 			Application.Quit();
 		}
-
+	    else if (Input.anyKey)
+	    {
+			GameObject score = GameObject.FindGameObjectWithTag("Score");
+		    if(score != null)
+		    {
+			    score.GetComponent<Score>().Reset();
+		    }
+			SceneManager.LoadScene(NextLevelName);
+	    }
 	}
 	public void NextLevelButton(int index)
 	{
+		GameObject.FindGameObjectWithTag("Score").GetComponent<Score>().Reset();
 		SceneManager.LoadScene(index);
 	}
 

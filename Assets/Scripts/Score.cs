@@ -5,6 +5,15 @@ public class Score : MonoBehaviour
 {
 
 	private int _scorePoints;
+    private float _killcounter;
+
+    private SpawnerMaster _spawnerMaster;
+
+    public float Killcounter
+    {
+        get { return _killcounter; }
+        private  set { _killcounter = value; }
+    }
 
 	public int ScorePoints
 	{
@@ -21,7 +30,8 @@ public class Score : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		if (_instance == null)
+        _spawnerMaster = GameObject.FindGameObjectWithTag("SpawnerMaster").GetComponent<SpawnerMaster>();
+        if (_instance == null)
 		{
 			_instance = this;
 			DontDestroyOnLoad(gameObject);
@@ -39,6 +49,7 @@ public class Score : MonoBehaviour
 		if (_counting)
 		{
 			_scorePoints = (int)(Factor * Time.timeSinceLevelLoad);
+		    _killcounter = _spawnerMaster.getKillCount();
 		}
 	}
 
